@@ -1,6 +1,6 @@
 body {
   background-color: #6c97fd;
-  padding: 50px;
+  padding: 100px;
 }
 
 h1 {
@@ -31,7 +31,8 @@ img {
 
 .square:hover {
   animation-play-state: paused;
-  transform: scale(1.2);
+  transform: scale(1.1);
+  background: #6c97fd;
   opacity: 95%;
 }
 
@@ -51,4 +52,46 @@ img {
 .overlay {
   margin: 10px;
   font-size: 12px;
+  display: none;
+}
+
+@media (max-width: 1045px) {
+img {
+  width: 200px;
+}
+  .square {
+    width: 250px;
+    height: 167px;
+}
+.overlay {
+  font-size: 10px;
+}
+}
+
+@media (max-width:992px) {
+h1 {
+  font-size: 14px;
+}
+img {
+  width: 100px;
+}
+  .square {
+    width: 150px;
+    height: 100px;
+}
+.overlay {
+  font-size: 8px;
+}
+@keyframes slide {
+  0% {
+    top: -150px;
+  }
+
+  50% {
+    top: -50px;
+  }
+  100% {
+    top: -250px;
+  }
+}
 }

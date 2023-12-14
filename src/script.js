@@ -1,16 +1,18 @@
-const squareContent = document.querySelector("#square-content");
+const squares = document.querySelectorAll(".square-content");
 const overlay = document.querySelector(".overlay");
+
 overlay.style.display = "none";
 
 function displayContent() {
-  squareContent.appendChild(overlay);
+  this.appendChild(overlay); 
   overlay.style.display = "block";
 }
 
-squareContent.addEventListener("mouseenter", displayContent);
-
 function hideContent() {
-  squareContent.appendChild(overlay);
   overlay.style.display = "none";
 }
-squareContent.addEventListener("mouseleave", hideContent);
+
+squares.forEach((square) => {
+  square.addEventListener("mouseenter", displayContent);
+  square.addEventListener("mouseleave", hideContent);
+});
